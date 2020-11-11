@@ -2,71 +2,198 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>ぐるなびAPI</title>
+    <link  th:href="@{/style.css}" rel="stylesheet">
 </head>
 <body>
-<form method="POST" action="/gurunabi/confirm">
-    <table class="sample-table" th:each="guru : ${guruCodeList}"
-           th:object="${guru}"　>
+<header>
+    <form method="POST" action="/gurunabi/confirm">
+        <table class="sample-table">
+            <tr>
+                <th></th>
+                <td>
+                    <input type="text" name="name"  size="15" placeholder="店名">キーワードを入力して飲食店検索してください</input>
+                </td>
+                <td>
+                    <select id="categoryName" name="categoryCode">
+                        <option value="">ジャンル指定なし</option>
+                        <option th:each="category: ${categoryList}" th:value="${category.category_l_code}" th:text="${category.category_l_name}"　>
+                        </option>
+                    </select>
+
+                    <select id="prefName" name="prefCode">
+                        <option value="">全国</option>
+                        <option th:each="pref: ${prefList}" th:value="${pref.pref_code}" th:text="${pref.pref_name}"　>
+                            <!--                                                    th:selected="${pref.pref_code == prefCode}">-->
+                        </option>
+                    </select>
+
+                </td>
+
+            </tr>
+        </table>
+        <input type="submit" value="送信" size="30"></input>
+        <font color="#ff0000"><th:block th:text="${errorMessage}"></th:block></font>
+    </form>
+    <a href="/gurunabi">戻る</a>
+</header>
+
+<div class="cp_tab">
+    <input type="radio" name="cp_tab" id="tab1_1" aria-controls="first_tab01" checked>
+    <label for="tab1_1">居酒屋</label>
+    <input type="radio" name="cp_tab" id="tab1_2" aria-controls="second_tab01">
+    <label for="tab1_2">日本料理・郷土料理</label>
+    <input type="radio" name="cp_tab" id="tab1_3" aria-controls="third_tab01">
+    <label for="tab1_3">すし・魚料理・シーフード</label>
+    <input type="radio" name="cp_tab" id="tab1_4" aria-controls="force_tab01">
+    <label for="tab1_4">鍋</label>
+    <input type="radio" name="cp_tab" id="tab1_5" aria-controls="five_tab01">
+    <label for="tab1_5">焼肉・ホルモン</label>
+    <input type="radio" name="cp_tab" id="tab1_6" aria-controls="six_tab01">
+    <label for="tab1_5">焼肉・ホルモン</label>
+
+
+    <div class="cp_tabpanels">
+
+
+<!--       居酒屋-->
+        <div id="first_tab01" class="cp_tabpanel">
+ <form method="POST" action="/gurunabi/confirm">
+            <div class="one" th:each="Izakaya : ${IzakayaCodeList}"
+                th:object="${Izakaya}"　>
+
+            <a class="photo" th:href="*{url}" target="_blank"><img class="im" th:src="*{image_url.shop_image1}" >＊画像を押すことでHPに飛べます</a>
+
+            <div class="pr" th:text="*{pr.pr_short}"></div>
+
+            <div><a th:href="*{coupon_url.pc}" target="_blank">PC用クーポンURL</a></div>
+
+            <div th:text="*{name}"></div>
+
+            <div th:text="*{address}"></div>
+
+            <div th:text="*{tel}"></div>
+
+            <div th:text="*{opentime}"></div>
+
+            <div th:text="'休日' + ' ' + *{holiday}"></div>
+
+            <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
 
 
 
-        <a th:href="*{url}" target="_blank"><img th:src="*{image_url.shop_image1}" ></a>
 
-        <img th:src="*{image_url.qrcode}">
+            </div>
+        <input type="text" value="メールアドレス" size="30"></input>
+ </form>
+        </div>
+<!--        日本料理・郷土料理-->
+        <div id="second_tab01" class="cp_tabpanel">
+            <form method="POST" action="/gurunabi/confirm">
+                <div class="one" th:each="Nihon : ${NihonRyouriCodeList}"
+                     th:object="${Nihon}"　>
+
+                    <a class="photo" th:href="*{url}" target="_blank"><img class="im" th:src="*{image_url.shop_image1}" >＊画像を押すことでHPに飛べます</a>
+
+                    <div class="pr" th:text="*{pr.pr_short}"></div>
+
+                    <div><a th:href="*{coupon_url.pc}" target="_blank">PC用クーポンURL</a></div>
+
+                    <div th:text="*{name}"></div>
+
+                    <div th:text="*{address}"></div>
+
+                    <div th:text="*{tel}"></div>
+
+                    <div th:text="*{opentime}"></div>
+
+                    <div th:text="'休日' + ' ' + *{holiday}"></div>
+
+                    <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
 
 
-        <tr>
-            <th>徒歩</th>
-            <td th:text="*{access.walk}"></td>
-        </tr>
+
+
+                </div>
+                <input type="text" value="メールアドレス" size="30"></input>
+            </form>
+        </div>
+<!--        すし・魚料理・シーフード-->
+        <div id="third_tab01" class="cp_tabpanel">
+                <form method="POST" action="/gurunabi/confirm">
+                    <div class="one" th:each="Sushi : ${SushiCodeList}"
+                         th:object="${Sushi}"　>
+
+                        <a class="photo" th:href="*{url}" target="_blank"><img class="im" th:src="*{image_url.shop_image1}" >＊画像を押すことでHPに飛べます</a>
+
+                        <div class="pr" th:text="*{pr.pr_short}"></div>
+
+                        <div><a th:href="*{coupon_url.pc}" target="_blank">PC用クーポンURL</a></div>
+
+                        <div th:text="*{name}"></div>
+
+                        <div th:text="*{address}"></div>
+
+                        <div th:text="*{tel}"></div>
+
+                        <div th:text="*{opentime}"></div>
+
+                        <div th:text="'休日' + ' ' + *{holiday}"></div>
+
+                        <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
 
 
 
-        <tr>
-            <th>PC用クーポンURL</th>
-            <td th:text="*{coupon_url.pc}">クーポンURL</td>
-        </tr>
 
-        <tr>
-            <th>携帯用クーポンURL</th>
-            <td th:text="*{coupon_url.mobile}"></td>
-        </tr>
+                    </div>
+                    <input type="text" value="メールアドレス" size="30"></input>
+                </form>
+        </div>
 
-        <tr>
-            <th>店舗画像1のURL</th>
-            <td th:text="*{image_url.shop_image1}"></td>
-        </tr>
+<!--        鍋-->
+        <div id="force_tab01" class="cp_tabpanel">
+            <form method="POST" action="/gurunabi/confirm">
+                <div class="one" th:each="Nabe : ${NabeCodeList}"
+                     th:object="${Nabe}"　>
 
-        <tr>
-            <th>該当件数</th>
-            <td th:text="${total_offset}"></td>
-        </tr>
-        <tr>
-            <th>店舗名</th>
-            <td th:text="*{name}"></td>
-        </tr>
+                    <a class="photo" th:href="*{url}" target="_blank"><img class="im" th:src="*{image_url.shop_image1}" >＊画像を押すことでHPに飛べます</a>
 
-        <tr>
-            <th>住所</th>
-            <td th:text="*{address}"></td>
-        </tr>
-        <tr>
-            <th>電話番号</th>
-            <td th:text="*{tel}"></td>
-        </tr>
-        <tr>
-            <th>営業時間</th>
-            <td th:text="*{opentime}"></td>
-        </tr>
+                    <div class="pr" th:text="*{pr.pr_short}"></div>
 
-        <tr>
-            <th>休業日</th>
-            <td th:text="*{holiday}"></td>
-        </tr>
+                    <div><a th:href="*{coupon_url.pc}" target="_blank">PC用クーポンURL</a></div>
 
-    </table>
-    <input type="submit" value="送信" size="30"></input>
-</form>
+                    <div th:text="*{name}"></div>
+
+                    <div th:text="*{address}"></div>
+
+                    <div th:text="*{tel}"></div>
+
+                    <div th:text="*{opentime}"></div>
+
+                    <div th:text="'休日' + ' ' + *{holiday}"></div>
+
+                    <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
+
+
+
+
+                </div>
+                <input type="text" value="メールアドレス" size="30"></input>
+            </form>
+        </div>
+
+<!--        焼肉・ホルモン-->
+        <div id="five_tab01" class="cp_tabpanel">
+            <h2>Force Tab</h2>
+            <p>Force Tab text</p>
+        </div>
+
+
+
+
+
+    </div>
+</div>
+
 </body>
 </html>

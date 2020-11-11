@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 
 
 @Controller
-public class PrefController {
+public class SerchApiController {
 
 
     @Autowired
