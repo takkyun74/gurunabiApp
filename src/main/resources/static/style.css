@@ -24,7 +24,24 @@
 .cp_tab > input:nth-child(5):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(3),
 .cp_tab > input:nth-child(7):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(4),
 .cp_tab > input:nth-child(9):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(5),
-.cp_tab > input:nth-child(11):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(6) {
+.cp_tab > input:nth-child(11):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(6),
+.cp_tab > input:nth-child(13):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(7),
+.cp_tab > input:nth-child(15):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(8),
+.cp_tab > input:nth-child(17):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(9),
+.cp_tab > input:nth-child(19):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(10),
+.cp_tab > input:nth-child(21):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(11),
+.cp_tab > input:nth-child(23):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(12),
+.cp_tab > input:nth-child(25):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(13),
+.cp_tab > input:nth-child(27):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(14),
+.cp_tab > input:nth-child(29):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(15),
+.cp_tab > input:nth-child(31):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(16),
+.cp_tab > input:nth-child(33):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(17),
+.cp_tab > input:nth-child(35):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(18),
+.cp_tab > input:nth-child(37):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(19),
+.cp_tab > input:nth-child(39):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(20),
+.cp_tab > input:nth-child(41):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(21),
+.cp_tab > input:nth-child(43):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(22)
+ {
 	display: block;
 }
 .cp_tab > label {

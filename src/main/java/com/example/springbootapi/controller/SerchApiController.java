@@ -1,6 +1,5 @@
 package com.example.springbootapi.controller;
 
-import com.example.springbootapi.dto.CategoryCodeDto;
 import com.example.springbootapi.dto.PrefCodeDto;
 import com.example.springbootapi.service.CategoryLargeService;
 import com.example.springbootapi.service.PrefService;
@@ -23,7 +22,7 @@ public class SerchApiController {
     CategoryLargeService categoryLargeService;
 
     // 都道府県情報表示
-    @GetMapping(value = "/gurunabi")
+    @GetMapping(value = "/")
     public String prefConfirm(HttpSession session, Model model) {
         // ぐるなび都道府県APIサービス呼び出し
         PrefCodeDto prefDto = prefService.prefService();
@@ -32,13 +31,13 @@ public class SerchApiController {
         // thymeleafでリストを展開して表示する
         model.addAttribute("prefList", prefDto.getPref());
 
-        // 大業態情報マスタAPIサービス呼び出し
-        CategoryCodeDto categoryDto = categoryLargeService.categoryService();
+//        // 大業態情報マスタAPIサービス呼び出し
+//        CategoryCodeDto categoryDto = categoryLargeService.categoryService();
+//
+//        // thymeleafでリストを展開して表示する
+//        model.addAttribute("categoryList", categoryDto.getCategory_l());
 
-        // thymeleafでリストを展開して表示する
-        model.addAttribute("categoryList", categoryDto.getCategory_l());
-
-        return "gurunabi";
+        return "gurunabi-confirm";
     }
 
 
