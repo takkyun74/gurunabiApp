@@ -31,7 +31,7 @@ public class GuruService {
 
     //居酒屋グループ
     private static final String IzakayaURL = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=89f7197b2d5b4c16154a5fc05f0b1fef" +
-            "&category_l=RSFST09000" +
+            "&category_l=RSFST09000&hit_per_page=30" +
             "&pref={pref_code}&name={name}";
 
     public GuruCodeDto IzakayaService(String pref_code, String name){
@@ -41,7 +41,7 @@ public class GuruService {
 
 //    //日本料理・郷土料理グループ
 //    private static final String NihonRyouriURL = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=89f7197b2d5b4c16154a5fc05f0b1fef" +
-//            "&category_l=RSFST02000" +
+//            "&category_l=RSFST02000&hit_per_page=30" +
 //            "&pref={pref_code}&name={name}";
 //
 //    public GuruCodeDto NihonRyouriService(String pref_code, String name){
@@ -51,7 +51,7 @@ public class GuruService {
 //
 //    //すし・魚料理・シーフードグループ
 //    private static final String SushiSakanaSeafoodURL = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=89f7197b2d5b4c16154a5fc05f0b1fef" +
-//            "&category_l=RSFST03000" +
+//            "&category_l=RSFST03000&hit_per_page=30" +
 //            "&pref={pref_code}&name={name}";
 //
 //    public GuruCodeDto SushiService(String pref_code, String name){
@@ -60,7 +60,7 @@ public class GuruService {
 //
 //    //鍋グループ
 //    private static final String NabeURL = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=89f7197b2d5b4c16154a5fc05f0b1fef" +
-//            "&category_l=RSFST04000" +
+//            "&category_l=RSFST04000&hit_per_page=30" +
 //            "&pref={pref_code}&name={name}";
 //
 //    public GuruCodeDto NabeService(String pref_code, String name){
@@ -69,7 +69,7 @@ public class GuruService {
 //
 //    //焼肉・ホルモングループ
 //    private static final String YakinikuHorumonURL = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=89f7197b2d5b4c16154a5fc05f0b1fef" +
-//            "&category_l=RSFST05000" +
+//            "&category_l=RSFST05000&hit_per_page=30" +
 //            "&pref={pref_code}&name={name}";
 //
 //    public GuruCodeDto YakinikuService(String pref_code, String name){
@@ -78,7 +78,7 @@ public class GuruService {
 //
 //    //焼き鳥・肉料理・串料理グループ
 //    private static final String YakitoriURL = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=89f7197b2d5b4c16154a5fc05f0b1fef" +
-//            "&category_l=RSFST06000" +
+//            "&category_l=RSFST06000&hit_per_page=30" +
 //            "&pref={pref_code}&name={name}";
 //
 //    public GuruCodeDto YakitoriService(String pref_code, String name){
@@ -87,7 +87,7 @@ public class GuruService {
 //
 //    //和食グループ
 //    private static final String WasyokuURL = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=89f7197b2d5b4c16154a5fc05f0b1fef" +
-//            "&category_l=RSFST01000" +
+//            "&category_l=RSFST01000&hit_per_page=30" +
 //            "&pref={pref_code}&name={name}";
 //
 //    public GuruCodeDto WasyokuService(String pref_code, String name){
@@ -96,7 +96,7 @@ public class GuruService {
 //
 //    //お好み焼き・粉物グループ
 //    private static final String OkonomiyakiURL = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=89f7197b2d5b4c16154a5fc05f0b1fef" +
-//            "&category_l=RSFST07000" +
+//            "&category_l=RSFST07000&hit_per_page=30" +
 //            "&pref={pref_code}&name={name}";
 //
 //    public GuruCodeDto OkonomiyakiService(String pref_code, String name){
@@ -106,7 +106,7 @@ public class GuruService {
 //
 //    //ラーメン・麺料理グループ
 //    private static final String RamenURL = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=89f7197b2d5b4c16154a5fc05f0b1fef" +
-//            "&category_l=RSFST08000" +
+//            "&category_l=RSFST08000&hit_per_page=30" +
 //            "&pref={pref_code}&name={name}";
 //
 //    public GuruCodeDto RamenService(String pref_code, String name){
@@ -116,7 +116,7 @@ public class GuruService {
 //
 //    //中華グループ
 //    private static final String TyuukaURL = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=89f7197b2d5b4c16154a5fc05f0b1fef" +
-//            "&category_l=RSFST14000" +
+//            "&category_l=RSFST14000&hit_per_page=30" +
 //            "&pref={pref_code}&name={name}";
 //
 //    public GuruCodeDto TyuukaService(String pref_code, String name){
@@ -125,7 +125,7 @@ public class GuruService {
 //
 //    //イタリアン・フレンチグループ
 //    private static final String ItarianURL = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=89f7197b2d5b4c16154a5fc05f0b1fef" +
-//            "&category_l=RSFST11000" +
+//            "&category_l=RSFST11000&hit_per_page=30" +
 //            "&pref={pref_code}&name={name}";
 //
 //    public GuruCodeDto ItarianService(String pref_code, String name){
@@ -135,7 +135,7 @@ public class GuruService {
 //
 //    //洋食グループ
 //    private static final String YousyokuURL = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=89f7197b2d5b4c16154a5fc05f0b1fef" +
-//            "&category_l=RSFST13000" +
+//            "&category_l=RSFST13000&hit_per_page=30" +
 //            "&pref={pref_code}&name={name}";
 //
 //    public GuruCodeDto YousyokuService(String pref_code, String name){
@@ -144,7 +144,7 @@ public class GuruService {
 //
 //    //欧米・各国料理グループ
 //    private static final String OubeiURL = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=89f7197b2d5b4c16154a5fc05f0b1fef" +
-//            "&category_l=RSFST12000" +
+//            "&category_l=RSFST12000&hit_per_page=30" +
 //            "&pref={pref_code}&name={name}";
 //
 //    public GuruCodeDto OubeiService(String pref_code, String name){
@@ -153,7 +153,7 @@ public class GuruService {
 //
 //    //カレーグループ
 //    private static final String KareURL = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=89f7197b2d5b4c16154a5fc05f0b1fef" +
-//            "&category_l=RSFST16000" +
+//            "&category_l=RSFST16000&hit_per_page=30" +
 //            "&pref={pref_code}&name={name}";
 //
 //    public GuruCodeDto KareService(String pref_code, String name){
@@ -162,7 +162,7 @@ public class GuruService {
 //
 //    //アジア・エスニック料理グループ
 //    private static final String AsiaURL = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=89f7197b2d5b4c16154a5fc05f0b1fef" +
-//            "&category_l=RSFST15000" +
+//            "&category_l=RSFST15000&hit_per_page=30" +
 //            "&pref={pref_code}&name={name}";
 //
 //    public GuruCodeDto AsiaService(String pref_code, String name){
@@ -172,7 +172,7 @@ public class GuruService {
 //
 //    //オーガニック・創作料理グループ
 //    private static final String OrganicURL = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=89f7197b2d5b4c16154a5fc05f0b1fef" +
-//            "&category_l=RSFST17000" +
+//            "&category_l=RSFST17000&hit_per_page=30" +
 //            "&pref={pref_code}&name={name}";
 //
 //
@@ -183,7 +183,7 @@ public class GuruService {
 //
 //    //ダイニングバー・バー・ビアホールグループ
 //    private static final String DiningURL = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=89f7197b2d5b4c16154a5fc05f0b1fef" +
-//            "&category_l=RSFST10000" +
+//            "&category_l=RSFST10000&hit_per_page=30" +
 //            "&pref={pref_code}&name={name}";
 //
 //    public GuruCodeDto DiningService(String pref_code, String name){
@@ -193,7 +193,7 @@ public class GuruService {
 //
 //    //お酒グループ
 //    private static final String OsakeURL = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=89f7197b2d5b4c16154a5fc05f0b1fef" +
-//            "&category_l=RSFST21000" +
+//            "&category_l=RSFST21000&hit_per_page=30" +
 //            "&pref={pref_code}&name={name}";
 //
 //
@@ -204,7 +204,7 @@ public class GuruService {
 //
 //    //カフェ・スイーツグループ
 //    private static final String CafeURL = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=89f7197b2d5b4c16154a5fc05f0b1fef" +
-//            "&category_l=RSFST18000" +
+//            "&category_l=RSFST18000&hit_per_page=30" +
 //            "&pref={pref_code}&name={name}";
 //
 //    public GuruCodeDto CafeService(String pref_code, String name){
@@ -214,7 +214,7 @@ public class GuruService {
 //
 //    //宴会・カラオケ・エンターテイメントグループ
 //    private static final String EnkaiURL = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=89f7197b2d5b4c16154a5fc05f0b1fef" +
-//            "&category_l=RSFST19000" +
+//            "&category_l=RSFST19000&hit_per_page=30" +
 //            "&pref={pref_code}&name={name}";
 //
 //
@@ -224,7 +224,7 @@ public class GuruService {
 //
 //    //ファミレス・ファーストフードグループ
 //    private static final String FamilyURL = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=89f7197b2d5b4c16154a5fc05f0b1fef" +
-//            "&category_l=RSFST20000" +
+//            "&category_l=RSFST20000&hit_per_page=30" +
 //            "&pref={pref_code}&name={name}";
 //
 //    public GuruCodeDto FamilyService(String pref_code, String name){
@@ -233,7 +233,7 @@ public class GuruService {
 //
 //    //その他の料理グループ
 //    private static final String OtherURL = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=89f7197b2d5b4c16154a5fc05f0b1fef" +
-//            "&category_l=RSFST90000" +
+//            "&category_l=RSFST90000&hit_per_page=30" +
 //            "&pref={pref_code}&name={name}";
 //
 //    public GuruCodeDto OtherService(String pref_code, String name){

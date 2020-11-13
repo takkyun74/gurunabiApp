@@ -8,7 +8,7 @@
 <body>
 <header>
     <form method="POST" action="/">
-        <table class="sample-table">
+        <table class="table">
             <tr>
                 <th></th>
                 <td>
@@ -33,7 +33,7 @@
 
             </tr>
         </table>
-        <input type="submit" value="検索" size="30"></input>
+        <input  class="search" type="submit" value="検索" size="30"></input>
         <font color="#ff0000"><th:block th:text="${errorMessage}"></th:block></font>
     </form>
 <!--    <a href="/gurunabi">戻る</a>-->
@@ -116,9 +116,11 @@
 
 
 
+
             </div>
 <!--        <input type="text" value="メールアドレス" size="30"></input>-->
  </form>
+<!--            <div th:text="${page_offset} + 1"></div>-->
         </div>
 <!--        日本料理・郷土料理-->
         <div id="second_tab01" class="cp_tabpanel">

@@ -105,6 +105,9 @@ public class TopController {
 
 //        model.addAttribute("guruCodeList", guruCodeDto.getRest());
 //        model.addAttribute("total_offset", guruCodeDto.getTotal_hit_count());
+//        model.addAttribute("page_offset", IzakayaCodeDto.getPage_offset());
+
+
         //居酒屋グループ
         model.addAttribute("IzakayaCodeList", IzakayaCodeDto.getRest());
 //        //日本料理・郷土料理グループ
