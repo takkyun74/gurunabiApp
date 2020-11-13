@@ -7,7 +7,7 @@
 </head>
 <body>
 <header>
-    <form method="POST" action="/gurunabi">
+    <form method="POST" action="/">
         <table class="sample-table">
             <tr>
                 <th></th>
@@ -20,14 +20,15 @@
 <!--                        <option th:each="category: ${categoryList}" th:value="${category.category_l_code}" th:text="${category.category_l_name}"　>-->
 <!--                        </option>-->
 <!--                    </select>-->
-
+<!--                    <div class="one" th:each="Izakaya : ${IzakayaCodeList}"-->
+<!--                         th:object="${Izakaya}"　>-->
                     <select id="prefName" name="prefCode">
                         <option value="">全国</option>
                         <option th:each="pref: ${prefList}" th:value="${pref.pref_code}" th:text="${pref.pref_name}"　>
-                            <!--                                                    th:selected="${pref.pref_code == prefCode}">-->
+<!--                                                                                th:selected="${pref.pref_code == Izakaya.code.prefcode}}">-->
                         </option>
                     </select>
-
+<!--                    </div>-->
                 </td>
 
             </tr>
@@ -116,7 +117,7 @@
 
 
             </div>
-        <input type="text" value="メールアドレス" size="30"></input>
+<!--        <input type="text" value="メールアドレス" size="30"></input>-->
  </form>
         </div>
 <!--        日本料理・郷土料理-->
@@ -147,7 +148,7 @@
 
 
                 </div>
-                <input type="text" value="メールアドレス" size="30"></input>
+<!--                <input type="text" value="メールアドレス" size="30"></input>-->
             </form>
         </div>
 <!--        すし・魚料理・シーフード-->
@@ -178,7 +179,7 @@
 
 
                     </div>
-                    <input type="text" value="メールアドレス" size="30"></input>
+<!--                    <input type="text" value="メールアドレス" size="30"></input>-->
                 </form>
         </div>
 
@@ -207,7 +208,7 @@
                     <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
 
                 </div>
-                <input type="text" value="メールアドレス" size="30"></input>
+<!--                <input type="text" value="メールアドレス" size="30"></input>-->
             </form>
         </div>
 
@@ -236,7 +237,7 @@
                     <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
 
                 </div>
-                <input type="text" value="メールアドレス" size="30"></input>
+<!--                <input type="text" value="メールアドレス" size="30"></input>-->
             </form>
         </div>
 
@@ -267,7 +268,7 @@
                     <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
 
                 </div>
-                <input type="text" value="メールアドレス" size="30"></input>
+<!--                <input type="text" value="メールアドレス" size="30"></input>-->
             </form>
         </div>
 
@@ -296,7 +297,7 @@
                     <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
 
                 </div>
-                <input type="text" value="メールアドレス" size="30"></input>
+<!--                <input type="text" value="メールアドレス" size="30"></input>-->
             </form>
         </div>
 
@@ -325,7 +326,7 @@
                     <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
 
                 </div>
-                <input type="text" value="メールアドレス" size="30"></input>
+<!--                <input type="text" value="メールアドレス" size="30"></input>-->
             </form>
         </div>
 
@@ -355,7 +356,7 @@
                     <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
 
                 </div>
-                <input type="text" value="メールアドレス" size="30"></input>
+<!--                <input type="text" value="メールアドレス" size="30"></input>-->
             </form>
         </div>
 
@@ -384,7 +385,7 @@
                     <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
 
                 </div>
-                <input type="text" value="メールアドレス" size="30"></input>
+<!--                <input type="text" value="メールアドレス" size="30"></input>-->
             </form>
         </div>
 
@@ -413,7 +414,7 @@
                     <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
 
                 </div>
-                <input type="text" value="メールアドレス" size="30"></input>
+<!--                <input type="text" value="メールアドレス" size="30"></input>-->
             </form>
         </div>
 
@@ -442,7 +443,7 @@
                     <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
 
                 </div>
-                <input type="text" value="メールアドレス" size="30"></input>
+<!--                <input type="text" value="メールアドレス" size="30"></input>-->
             </form>
         </div>
 
@@ -471,7 +472,7 @@
                     <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
 
                 </div>
-                <input type="text" value="メールアドレス" size="30"></input>
+<!--                <input type="text" value="メールアドレス" size="30"></input>-->
             </form>
         </div>
 
@@ -500,7 +501,7 @@
                     <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
 
                 </div>
-                <input type="text" value="メールアドレス" size="30"></input>
+<!--                <input type="text" value="メールアドレス" size="30"></input>-->
             </form>
         </div>
 
@@ -529,7 +530,7 @@
                     <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
 
                 </div>
-                <input type="text" value="メールアドレス" size="30"></input>
+<!--                <input type="text" value="メールアドレス" size="30"></input>-->
             </form>
         </div>
 
@@ -558,7 +559,7 @@
                     <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
 
                 </div>
-                <input type="text" value="メールアドレス" size="30"></input>
+<!--                <input type="text" value="メールアドレス" size="30"></input>-->
             </form>
         </div>
 
@@ -587,7 +588,7 @@
                     <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
 
                 </div>
-                <input type="text" value="メールアドレス" size="30"></input>
+<!--                <input type="text" value="メールアドレス" size="30"></input>-->
             </form>
         </div>
 
@@ -616,7 +617,7 @@
                     <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
 
                 </div>
-                <input type="text" value="メールアドレス" size="30"></input>
+<!--                <input type="text" value="メールアドレス" size="30"></input>-->
             </form>
         </div>
 
@@ -646,7 +647,7 @@
                     <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
 
                 </div>
-                <input type="text" value="メールアドレス" size="30"></input>
+<!--                <input type="text" value="メールアドレス" size="30"></input>-->
             </form>
         </div>
 
@@ -675,7 +676,7 @@
                     <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
 
                 </div>
-                <input type="text" value="メールアドレス" size="30"></input>
+<!--                <input type="text" value="メールアドレス" size="30"></input>-->
             </form>
         </div>
 
@@ -704,7 +705,7 @@
                     <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
 
                 </div>
-                <input type="text" value="メールアドレス" size="30"></input>
+<!--                <input type="text" value="メールアドレス" size="30"></input>-->
             </form>
         </div>
 
@@ -733,7 +734,7 @@
                     <div th:text="*{access.line}+ ' ' + *{access.station} + *{access.walk} + '分' "></div>
 
                 </div>
-                <input type="text" value="メールアドレス" size="30"></input>
+<!--                <input type="text" value="メールアドレス" size="30"></input>-->
             </form>
         </div>
 

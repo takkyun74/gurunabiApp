@@ -15,9 +15,13 @@ public class PrefService {
     @Qualifier("searchRestTemplate")
     RestTemplate restPrefTemplate;
 
+    String api1 = "89f7197b2d5b4c16154a5fc05f0b1fef";
+
+    String api2 = "d776cb014c9cfa4df83f8468d0db699a";
+
     //ぐるなび都道府県マスタ取得API
     private static final String URL = "https://api.gnavi.co.jp/master/PrefSearchAPI/v3/" +
-            "?keyid=d776cb014c9cfa4df83f8468d0db699a&lang=ja";
+            "?keyid=89f7197b2d5b4c16154a5fc05f0b1fef&lang=ja";
 
     public PrefCodeDto prefService() {
         return restPrefTemplate.getForObject(URL, PrefCodeDto.class);
